@@ -1,0 +1,25 @@
+<ion-side-menus>
+    <ion-side-menu side="left" ng-if="app.isNavMode()">
+        <ion-list>
+            <div class="item item-divider">
+                Navigation
+            </div>
+            <ion-item ui-sref="app.winnerAnalysis" class="cursor-pointer">Winner Analysis</ion-item>
+        </ion-list>
+    </ion-side-menu>
+
+    <ion-side-menu side="left" ng-if="app.isAccountSwitcher()">
+        <ion-list>
+            <div class="item item-divider">
+                Accounts
+            </div>
+            <ion-item ng-repeat="account in app.SessionService.accounts" ng-click="app.switchToAccount(account)" class="cursor-pointer">{{account.name}}</ion-item>
+        </ion-list>
+    </ion-side-menu>
+
+    <ion-side-menu-content>
+        <ion-view ui-view="currentPage">
+        </ion-view>
+    </ion-side-menu-content>
+
+</ion-side-menus>

@@ -1,0 +1,80 @@
+@import './less/vars.less';
+
+* {
+    box-sizing: border-box;
+}
+
+.pixLogo {
+    margin-left: @unit;
+    width: 33px;
+    height: 33px;
+    right: 14px;
+    position: absolute;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.account-display {
+    right: 0;
+    position: absolute;
+    padding: @unit;
+}
+
+.pull-right {
+    position: absolute;
+    right: 0;
+    padding-right: 22px;
+}
+
+.selectedButton {
+    background-color: #eee;
+}
+
+.successGraph {
+    display: block;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: #303F9F;
+}
+
+.bar:hover {
+  fill: #304FFE;
+}
+
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #efefef;
+    border-radius: 2px;
+    z-index: 10;
+}
+
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+}
